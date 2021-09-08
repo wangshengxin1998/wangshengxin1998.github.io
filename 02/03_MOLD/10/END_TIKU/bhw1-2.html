@@ -1,0 +1,74 @@
+<!-- saved from url=(0013)about:internet --> <!-- Disable Microsoft Windows XP Service Pack 2 warning when played back locally -->
+
+<html>
+<head>
+	<title>&#31532;&#19968;&#31456; &#31532;2&#33410;  &#32858;&#21512;&#29289;&#30340;&#27969;&#21464;&#24615;&#36136;</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="Keywords" content="Tanida Quiz Builder - www.quiz-builder.com">
+	<meta name="Description" content="Tanida Quiz Builder - create quizzes in Flash format - www.quiz-builder.com">
+    <script src="/AC_RunActiveContent.js" language="javascript"></script>
+<script src="/ruffle.js"></script></head> 
+
+<body bgcolor="#ffffff""> 
+
+<script type="text/javascript">
+
+	function SendEmail(xvar){
+	 var results = xvar.split("$$TQB$$");	
+
+	 var email = results[0];
+ 	 var subject = results[1];
+	 var body = results[2];
+
+	 str  = '<FORM id="formEmail" method="POST" action="mailto:' + email + '?subject=' + subject + '" enctype="text/plain">';
+	 str += '<INPUT TYPE="hidden" NAME="My results are " VALUE=\'' + body + '\'>';
+	 str += '<input type="submit"></FORM>';
+
+	 document.getElementById("divEmail").innerHTML = str;
+	 document.getElementById("divEmail").document.getElementById("formEmail").submit();
+	};
+
+	function quiz_DoFSCommand(command, args) { 
+
+	  if (command == "SendEmail") { 
+	    SendEmail(args);
+	  }
+
+	}
+
+</script>
+
+
+
+<SCRIPT LANGUAGE="VBScript">
+<!-- 
+// Catch FS Commands in IE, and pass them to the corresponding JavaScript function.
+
+Sub quiz_FSCommand(ByVal command, ByVal args)
+    call quiz_DoFSCommand(command, args)
+end sub
+
+// -->
+</SCRIPT>
+
+<center>
+	<!-- the comment and script is used to workaround the KB912945 patch -->
+	<!--[if gte IE 6]> <comment id="to_be_rewritten"> <![endif]-->
+
+	<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0','width','850','height','450','id','quiz','src','bhw1-2','quality','high','bgcolor','#FFFFFF','name','quiz','align','','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','bhw1-2' ); //end AC code
+</script><noscript><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" WIDTH="850" HEIGHT="450" id="quiz"> 
+  <PARAM NAME=movie VALUE="bhw1-2.swf">
+	<PARAM NAME=quality VALUE=high>
+	<PARAM NAME=bgcolor VALUE=#FFFFFF>
+	<EMBED src="bhw1-2.swf" quality=high bgcolor=#FFFFFF WIDTH="850" HEIGHT="450" NAME="quiz" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"> </EMBED>
+	</OBJECT></noscript>
+
+	</comment><script language="Javascript" src="ieupdate.js"></script>
+</center>   
+
+<div id="divEmail" style="visibility:hidden"></div>
+
+</body>
+</html>
+
